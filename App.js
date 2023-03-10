@@ -1,6 +1,6 @@
- import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Platform, Text, StatusBar, SafeAreaView, Image } from 'react-native';
-
+import { StatusBar } from 'expo-status-bar';
+import { Dimensions, StyleSheet, Platform, Text, StatusBar, SafeAreaView, Image } from 'react-native';
+import {useDimensions} from "@react-native-community/hooks"
 export default function App() {
   return ( 
     <SafeAreaView style={styles.container}>
