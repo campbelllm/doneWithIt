@@ -1,6 +1,6 @@
 import { View, Pressable, Text } from 'react-native';
 import styles from './buttonStyle'
-import colors from "../config/colors"
+import colors from "../../config/colors"
 
 function Button({title, color}) {
     return (

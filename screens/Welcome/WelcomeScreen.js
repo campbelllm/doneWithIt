@@ -1,6 +1,6 @@
 import { ImageBackground, Text, Image, View } from 'react-native';
 import styles from './welcomeStyles';
-import Button from '../../components/Button';
+import Button from '../../components/Button/Button';
 
 export default function WelcomeScreen() {
 	return (
