@@ -1,34 +1,28 @@
-import {
-	ImageBackground,
-	Pressable,
-	Text,
-	Image,
-	View,
-} from 'react-native';
-import styles from "./welcomeStyles"
+import { ImageBackground, Text, Image, View } from 'react-native';
+import styles from './welcomeStyles';
+import Button from '../../components/Button';
 
 export default function WelcomeScreen() {
 	return (
 		<ImageBackground
 			source={require('../../assets/background.jpg')}
-			style={styles.background}>
+			style={styles.background}
+			blurRadius={6}>
 			<View style={styles.title}>
 				<Image
 					style={styles.logo}
-                    source={require('../../assets/logo-red.png')}
-                    width= '10%'></Image>
+					source={require('../../assets/logo-red.png')}
+					width="10%"></Image>
 				<Text>Sell What You Don't Need</Text>
 			</View>
 			<View style={styles.buttons}>
-				<Pressable style={styles.buttonRed}>
-					<Text style={styles.text}>Login</Text>
-				</Pressable>
-				<Pressable style={styles.buttonBlue}>
-					<Text style={styles.text}>Sign Up</Text>
-				</Pressable>
+				<Button
+					title={'LOGIN'}
+					color="primary"></Button>
+				<Button
+					title={'SIGN UP'}
+					color="secondary"></Button>
 			</View>
 		</ImageBackground>
 	);
 }
-
-

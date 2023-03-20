@@ -16,21 +16,8 @@ const styles = StyleSheet.create({
 		alignSelf: 'center',
 	},
 	buttons: {
-		fontSize: '20px',
-
-		postion: 'absolute',
-		bottom: 0,
-	},
-	buttonRed: {
-		backgroundColor: '#4ECDC4',
-	},
-	buttonBlue: {
-		backgroundColor: '#fc5c65',
-	},
-	text: {
-		alignSelf: 'center',
-		fontSize: '20px',
-		padding: 20,
+		marginTop: 20,
+		marginBottom: 20,
 	},
 });
 

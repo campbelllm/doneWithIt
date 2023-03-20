@@ -1,14 +1,12 @@
 import { View, Pressable, Text } from 'react-native';
 import styles from './buttonStyle'
+import colors from "../config/colors"
 
-
-function Button({title}) {
+function Button({title, color}) {
     return (
-        <View style={styles.main}>
-        <Pressable style={styles.button}>
-            <Text style={styles.text}>Login</Text>
+        <Pressable style={[styles.button, {backgroundColor: colors[color]}]}>
+            <Text style={styles.text}>{title}</Text>
         </Pressable>
-    </View>
     );
 }
 

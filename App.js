@@ -12,7 +12,7 @@ import WelcomeScreen from './screens/Welcome/WelcomeScreen.js';
 import ImageScreen from './screens/Image/ImageScreen.js';
 import Button from './components/Button.js';
 export default function App() {
-	return (<Button/>);
+	return (<WelcomeScreen/>);
 }
 
 const styles = StyleSheet.create({
