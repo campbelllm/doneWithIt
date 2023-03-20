@@ -1,11 +1,8 @@
 import {
 	ImageBackground,
 	Pressable,
-	Dimensions,
 	StyleSheet,
-	Platform,
 	Text,
-	StatusBar,
 	Image,
 	View,
 } from 'react-native';
