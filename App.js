@@ -1,21 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
-import { Dimensions, StyleSheet, Platform, Text, StatusBar, SafeAreaView, Image } from 'react-native';
-import {useDimensions} from "@react-native-community/hooks"
+import {
+	Dimensions,
+	StyleSheet,
+	Platform,
+	Text,
+	SafeAreaView,
+	Image,
+} from 'react-native';
+import { useDimensions } from '@react-native-community/hooks';
+import WelcomeScreen from './screens/WelcomeScreen.js';
 export default function App() {
-  return ( 
-    <SafeAreaView style={styles.container}>
-      <Text>hello</Text>
-      <Image></Image>
-    </SafeAreaView>
-  );
+	return <WelcomeScreen />;
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    justifyContent: "center",
-    alignItems: "center",
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight
-  },
+	container: {
+		flex: 1,
+	},
 });
