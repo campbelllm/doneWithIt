@@ -11,7 +11,7 @@ function ImageScreen(props) {
 			</View>
 			<Image
 				style={styles.image}
-				source={require('../assets/chair.jpg')}></Image>
+				source={require('../../assets/chair.jpg')}></Image>
 		</SafeAreaView>
 	);
 }

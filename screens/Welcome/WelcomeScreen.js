@@ -8,15 +8,14 @@ import {
 import styles from "./welcomeStyles"
 
 export default function WelcomeScreen() {
-	const background = { uri: './assets/backgroundImage.jpg' };
 	return (
 		<ImageBackground
-			source={require('../assets/background.jpg')}
+			source={require('../../assets/background.jpg')}
 			style={styles.background}>
 			<View style={styles.title}>
 				<Image
 					style={styles.logo}
-                    source={require('../assets/logo-red.png')}
+                    source={require('../../assets/logo-red.png')}
                     width= '10%'></Image>
 				<Text>Sell What You Don't Need</Text>
 			</View>

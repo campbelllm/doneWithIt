@@ -10,8 +10,9 @@ import {
 import { useDimensions } from '@react-native-community/hooks';
 import WelcomeScreen from './screens/Welcome/WelcomeScreen.js';
 import ImageScreen from './screens/Image/ImageScreen.js';
+import Button from './components/Button.js';
 export default function App() {
-	return <ImageScreen/>;
+	return (<Button/>);
 }
 
 const styles = StyleSheet.create({

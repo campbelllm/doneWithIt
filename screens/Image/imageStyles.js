@@ -32,4 +32,4 @@ const styles = StyleSheet.create({
 	},
 });
 
-export default imageStyles;
+export default styles;
