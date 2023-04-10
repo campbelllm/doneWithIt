@@ -3,31 +3,32 @@ import colors from '../../config/colors'
 const styles = StyleSheet.create({
     card: {
 		flexDirection: 'column',
-		marginLeft: 5,
-		marginRight: 20,
-		marginBottom: 40,
+		marginBottom: 25,
 		fontSize: 15,
 		paddingBottom: 10,
         backgroundColor: colors.white,
         overflow: 'hidden'
 	},
     image: {
-		height: 200,
+		height: 300,
         width: '100%',
 	},
 	title: {
-        margin: 10,
-        fontSize: 18
+        margin: 15,
+        marginBottom: 10,
+        fontSize: 18,
+        fontWeight: 500,
 	},
     subTitle: {
         fontWeight: 'bold',
-		marginLeft: 10,
+		marginLeft: 15,
 		color: colors.secondary,
     },
     contact: {
         display: 'flex',
         flexDirection: 'row',
         height: 60,
+        marginLeft: 15,
     },
     contactPhoto: {
         height:50,
@@ -36,12 +37,14 @@ const styles = StyleSheet.create({
     },
     userInfo: {
         fontSize: 15,
+        marginLeft: 5,
     },
     name: {
-        fontWeight: 'bold',
+        fontWeight: 600,
+        marginBottom: 4,
     },
     listings: {
-        
+        fontWeight: 300,
     }
 
 })

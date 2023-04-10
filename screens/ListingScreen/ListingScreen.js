@@ -14,7 +14,7 @@ function ListingScreen({
 			<View style={styles.card}>
 				<Image
 					source={image}
-					style={styles.image}></Image>
+                    style={styles.image}></Image>
 				<Text style={styles.title}>{title}</Text>
 				<Text style={styles.subTitle}>{subTitle}</Text>
 			</View>
@@ -24,7 +24,7 @@ function ListingScreen({
 					style={styles.contactPhoto}></Image>
 				<View style={styles.userInfo}>
 					<Text style={styles.name}> Lindsey Smith</Text>
-					<Text styles={styles.listings}> 2 Listings</Text>
+					<Text style={styles.listings}> 2 Listings</Text>
 				</View>
 			</View>
 		</View>
