@@ -12,12 +12,18 @@ import WelcomeScreen from './screens/Welcome/WelcomeScreen.js';
 import ImageScreen from './screens/Image/ImageScreen.js';
 import Button from './components/Button/Button';
 import Card from './components/Card/Card';
+import ListingScreen from './screens/ListingScreen/ListingScreen';
 export default function App() {
-	return (<Card
-		title={"Red Jacket"}
-		subTitle={'$100'}
-		image={require("./assets/jacket.jpg")}
-	/>);
+	return (
+		<ListingScreen
+			title="Red Jacket"
+			subTitle="$200"
+			image={require('./assets/jacket.jpg')}
+			contactPhoto
+			name
+			listings
+		/>
+	);
 }
 
 const styles = StyleSheet.create({
