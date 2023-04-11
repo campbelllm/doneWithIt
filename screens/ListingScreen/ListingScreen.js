@@ -6,9 +6,7 @@ function ListingScreen({
 	title,
 	subTitle,
 	image,
-	contactPhoto,
-	name,
-	listings,
+
 }) {
 	return (
 		<View>
@@ -20,7 +18,11 @@ function ListingScreen({
                 <Text style={styles.subTitle}>{subTitle}</Text>
 			</View>
 
-			<ListItem></ListItem>
+			<ListItem
+				image={require('../../assets/mosh.jpg')}
+				name="lindsey"
+				listings='none'
+			></ListItem>
 		</View>
 	);
 }

@@ -13,15 +13,10 @@ import ImageScreen from './screens/Image/ImageScreen.js';
 import Button from './components/Button/Button';
 import Card from './components/Card/Card';
 import ListingScreen from './screens/ListingScreen/ListingScreen';
+import Messages from './screens/Messages/Messages'
 export default function App() {
 	return (
-		<ListingScreen
-			title="Red Jacket"
-			subTitle="$200"
-			image={require('./assets/jacket.jpg')}
-			contactPhoto
-			name
-			listings
+		<Messages
 		/>
 	);
 }
