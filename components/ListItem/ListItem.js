@@ -1,14 +1,14 @@
 import { View, Image, Text } from 'react-native';
 import styles from './listItemStyle';
-function ListItem(props) {
+function ListItem(image, name, listings) {
 	return (
 		<View style={styles.contact}>
 			<Image
-				source={require('../../assets/mosh.jpg')}
+				source={require({image})}
 				style={styles.contactPhoto}></Image>
 			<View style={styles.userInfo}>
-				<Text style={styles.name}> Lindsey Smith</Text>
-				<Text style={styles.listings}> 2 Listings</Text>
+				<Text style={styles.name}>{name}</Text>
+				<Text style={styles.listings}>{listings}</Text>
 			</View>
 		</View>
 	);
