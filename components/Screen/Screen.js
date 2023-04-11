@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from './screenStyles'
+import { SafeAreaView } from 'react-native';
+import styles from './screenStyles';
 
 function Screen({children}) {
     return (

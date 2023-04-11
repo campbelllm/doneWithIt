@@ -1,8 +1,8 @@
-import { SafeAreaView, FlatList } from 'react-native';
+import { FlatList } from 'react-native';
 import ListItem from '../../components/ListItem/ListItem';
-import styles from './messagesSyles'
-
-
+import styles from './messagesStyles'
+import Screen from "../../components/Screen/Screen"
+import ListItemSeparator from '../../components/ListItemSeperator/ListItemSeparator';
 const messages = [
 	{
 		id: 1,
@@ -20,7 +20,7 @@ const messages = [
 
 function Messages(props) {
 	return (
-		<SafeAreaView style={styles.screen}>
+		<Screen style={styles.screen}>
 			<FlatList
 				data={messages}
 				keyExtractor={(message) => message.id.toString()}
@@ -31,8 +31,9 @@ function Messages(props) {
 						listings={item.description}
 					/>
 				}
+                ItemSeparatorComponent={ListItemSeparator}
 			/>
-		</SafeAreaView>
+		</Screen>
 	);
 }
 

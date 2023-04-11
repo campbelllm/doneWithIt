@@ -6,3 +6,5 @@ const styles = StyleSheet.create({
     screen: Constants.statusBarHeight
     
 })
+
+export default styles;
