@@ -1,5 +1,6 @@
 import { Text, Image, View } from 'react-native';
-import styles from './listingStyles'
+import styles from './listingStyles';
+import ListItem from '../../components/ListItem/ListItem';
 
 function ListingScreen({
 	title,
@@ -14,19 +15,12 @@ function ListingScreen({
 			<View style={styles.card}>
 				<Image
 					source={image}
-                    style={styles.image}></Image>
+					style={styles.image}></Image>
 				<Text style={styles.title}>{title}</Text>
-				<Text style={styles.subTitle}>{subTitle}</Text>
+                <Text style={styles.subTitle}>{subTitle}</Text>
 			</View>
-			<View style={styles.contact}>
-				<Image
-					source={require('../../assets/mosh.jpg')}
-					style={styles.contactPhoto}></Image>
-				<View style={styles.userInfo}>
-					<Text style={styles.name}> Lindsey Smith</Text>
-					<Text style={styles.listings}> 2 Listings</Text>
-				</View>
-			</View>
+
+			<ListItem></ListItem>
 		</View>
 	);
 }

@@ -24,29 +24,7 @@ const styles = StyleSheet.create({
 		marginLeft: 15,
 		color: colors.secondary,
     },
-    contact: {
-        display: 'flex',
-        flexDirection: 'row',
-        height: 60,
-        marginLeft: 15,
-    },
-    contactPhoto: {
-        height:50,
-        borderRadius: 100,
-        width: 50
-    },
-    userInfo: {
-        fontSize: 15,
-        marginLeft: 5,
-    },
-    name: {
-        fontWeight: 600,
-        marginBottom: 4,
-    },
-    listings: {
-        fontWeight: 300,
-    }
-
+   
 })
 
 export default styles;
