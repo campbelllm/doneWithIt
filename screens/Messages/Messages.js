@@ -1,5 +1,7 @@
 import { SafeAreaView, FlatList } from 'react-native';
 import ListItem from '../../components/ListItem/ListItem';
+import styles from './messagesSyles'
+
 
 const messages = [
 	{
@@ -18,7 +20,7 @@ const messages = [
 
 function Messages(props) {
 	return (
-		<SafeAreaView>
+		<SafeAreaView style={styles.screen}>
 			<FlatList
 				data={messages}
 				keyExtractor={(message) => message.id.toString()}
