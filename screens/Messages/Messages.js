@@ -3,6 +3,7 @@ import ListItem from '../../components/ListItem/ListItem';
 import styles from './messagesStyles'
 import Screen from "../../components/Screen/Screen"
 import ListItemSeparator from '../../components/ListItemSeperator/ListItemSeparator';
+import ListItemDeleteAction from '../../components/ListItemDeleteAction.js/ListItemDeleteAction';
 const messages = [
 	{
 		id: 1,
@@ -18,7 +19,7 @@ const messages = [
 	},
 ];
 
-function Messages(props) {
+function Messages() {
 	return (
 		<Screen style={styles.screen}>
 			<FlatList
@@ -30,9 +31,11 @@ function Messages(props) {
 						name={item.title}
 						listings={item.description}
 						onPress={() => console.log("Message selected", item)}
+						renderRightActions={ListItemDeleteAction}
 					/>
 				}
-                ItemSeparatorComponent={ListItemSeparator}
+				ItemSeparatorComponent={ListItemSeparator}
+				
 			/>
 		</Screen>
 	);
