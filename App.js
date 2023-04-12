@@ -14,10 +14,10 @@ import Button from './components/Button/Button';
 import Card from './components/Card/Card';
 import ListingScreen from './screens/ListingScreen/ListingScreen';
 import Messages from './screens/Messages/Messages'
+import MyAccount from './screens/MyAccount/MyAccount'
 export default function App() {
 	return (
-		<Messages
-		/>
+		<MyAccount/>
 	);
 }
 
