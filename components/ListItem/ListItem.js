@@ -1,16 +1,22 @@
-import { View, Image, Text } from 'react-native';
+import { View, Image, Text, TouchableHighlight } from 'react-native';
 import styles from './listItemStyle';
-function ListItem({image, name, listings}) {
+import colors from '../../config/colors';
+
+function ListItem({ image, name, listings, onPress }) {
 	return (
-		<View style={styles.contact}>
-			<Image
-				source={image}
-				style={styles.contactPhoto}></Image>
-			<View style={styles.userInfo}>
-				<Text style={styles.name}>{name}</Text>
-				<Text style={styles.listings}>{listings}</Text>
+		<TouchableHighlight
+			underlayColor={colors.light}
+			onPress={onPress}>
+			<View style={styles.contact}>
+				<Image
+					source={image}
+					style={styles.contactPhoto}></Image>
+				<View style={styles.userInfo}>
+					<Text style={styles.name}>{name}</Text>
+					<Text style={styles.listings}>{listings}</Text>
+				</View>
 			</View>
-		</View>
+		</TouchableHighlight>
 	);
 }
 

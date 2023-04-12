@@ -29,6 +29,7 @@ function Messages(props) {
 						image={item.image}
 						name={item.title}
 						listings={item.description}
+						onPress={() => console.log("Message selected", item)}
 					/>
 				}
                 ItemSeparatorComponent={ListItemSeparator}
