@@ -7,10 +7,8 @@ const styles = StyleSheet.create({
 		flexDirection: 'column',
 		marginLeft: 20,
 		marginRight: 20,
-		marginTop: 60,
-		marginBottom: 40,
 		fontSize: 15,
-		paddingBottom: 10,
+		paddingBottom: 15,
         backgroundColor: colors.white,
         overflow: 'hidden'
 	},

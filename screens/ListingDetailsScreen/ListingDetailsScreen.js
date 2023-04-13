@@ -1,5 +1,5 @@
 import { Text, Image, View } from 'react-native';
-import styles from './listingStyles';
+import styles from './listingDetailsStyles';
 import ListItem from '../../components/ListItem/ListItem';
 
 function ListingScreen({

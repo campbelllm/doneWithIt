@@ -1,9 +1,9 @@
 import { View, Image, Text } from 'react-native';
 import styles from './cardStyle';
 
-function Card({ title, subTitle, image }) {
+function Card({ title, subTitle, image, style }) {
 	return (
-		<View style={styles.card}>
+		<View style={[styles.card, style]}>
 			<Image
 				source={image}
 				style={styles.image}></Image>
