@@ -21,7 +21,7 @@ function ListItem({
 					{image && 
 						<Image
 							source={image}
-							style={styles.contactPhoto}></Image>
+							style={styles.contactPhoto}/>
 					}
 					<View style={styles.userInfo}>
 						<Text style={styles.name}>{name}</Text>
