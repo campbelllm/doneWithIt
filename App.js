@@ -21,18 +21,7 @@ import Screen from './components/Screen/Screen';
 
 export default function App() {
 	return (
-	<Screen>
-		<ListItem
-				name="Lindsey"
-				listings="2 listings"
-				ImageComponent={<Icon 
-					name='email'
-					size={35}
-					backgroundColor='black'
-					iconColor='white'
-			/>}
-			/>
-	</Screen>
+	<MyAccount/>
 	);
 }
 

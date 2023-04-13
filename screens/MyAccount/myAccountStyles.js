@@ -4,7 +4,7 @@ import colors from '../../config/colors'
 const styles = StyleSheet.create({
     main: {
         flex:1,
-        backgroundColor: 'yellow'
+        backgroundColor: 'yellow',
     },
     user: {
         
@@ -13,7 +13,8 @@ const styles = StyleSheet.create({
         
     },
     listings: {
-        
+       marginVertical: 20 
+
     },
     messages: {
 
