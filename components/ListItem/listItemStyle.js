@@ -1,31 +1,30 @@
 import { StyleSheet } from "react-native";
+import colors from '../../config/colors'
 
 const styles = StyleSheet.create({
     contactPhoto: {
         height:50,
         borderRadius: 100,
         width: 50,
-        justifyContent: 'center'
     },
     userInfo: {
         fontSize: 15,
-        // marginLeft: 10,
-        justifyContent: 'center',
         padding: 10,
+        paddingBottom: 0
     },
     name: {
         fontWeight: 600,
-        marginBottom: 0,
     },
     listings: {
         fontWeight: 300,
     },
     contact: {
-        height: 50,
         display: 'flex',
         flexDirection: 'row',
-        margin: 15,
-        alignContent : 'space-around'
+        padding: 15,
+        alignContent: 'center',
+        backgroundColor: colors.white,
+   
     },
 })
 

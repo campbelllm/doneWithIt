@@ -5,6 +5,7 @@ import styles from './myAccountStyles';
 import ListItem from '../../components/ListItem/ListItem';
 import Icon from '../../components/Icon/Icon'
 import colors from '../../config/colors'
+import ListItemSeparator from '../../components/ListItemSeperator/ListItemSeparator';
 
 const menuItems = [
     {
@@ -26,17 +27,19 @@ const menuItems = [
 
 function MyAccount(props) {
 	return (
-		<Screen style={styles.main}>
+        <Screen style={styles.main}>
+            <View style={styles.user}>
 			<ListItem
-				style={styles.user}
 				image={require('../../assets/mosh.jpg')}
 				name={'Lindsey Smith'}
 				listings={'lindsey@lindseysmith.co'}
-            />
+                />
+                </View>
             <View style={styles.list}>
                 <FlatList
                     data={menuItems}
                     keyExtractor={item => item.title}
+                    ItemSeparatorComponent={ListItemSeparator}
                     renderItem={({ item }) =>
                         <ListItem
                             name={item.title}
@@ -50,9 +53,9 @@ function MyAccount(props) {
                     />}
                 >
                 </FlatList>
-                </View>
+            </View>
+            <View style={styles.logOut} >
             <ListItem
-                style={styles.logOut} 
                 name={'Log Out'}
                 ImageComponent={<Icon
                     name='logout'
@@ -60,7 +63,8 @@ function MyAccount(props) {
                     backgroundColor='#ffe66d'
                     iconColor='white'
                 />}
-            />
+                />
+            </View>
 		</Screen>
 	);
 }
