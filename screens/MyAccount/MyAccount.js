@@ -2,8 +2,8 @@ import React from 'react';
 import { View } from 'react-native';
 import Screen from '../../components/Screen/Screen';
 import styles from './myAccountStyles';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 import ListItem from '../../components/ListItem/ListItem';
+import Icon from '../../components/Icon/Icon'
 import colors from '../../config/colors'
 
 function MyAccount(props) {
@@ -18,30 +18,18 @@ function MyAccount(props) {
 			<View style={styles.list}>
                 <ListItem
                     style={styles.listings} 
-                //     image={<MaterialCommunityIcons
-				// 	name="format-list-bulleted"
-				// 	size={35}
-				// 	color= {colors.primary}
-				// />}
                     name={'My Listings'}
+                    // ImageComponent={}
                     />
                 <ListItem
                     style={styles.messages} 
-                //     image={<MaterialCommunityIcons
-				// 	name="email"
-				// 	size={35}
-				// 	color= {colors.secondary}
-				// />}
+               
                     name={'My Messages'}
                     />
 			</View>
             <ListItem
                 style={styles.logOut} 
-                // image={<MaterialCommunityIcons
-				// 	name="logout"
-				// 	size={35}
-				// 	color="#ffe66d"
-				// />}
+           
                 name={'Log Out'}
             />
 		</Screen>

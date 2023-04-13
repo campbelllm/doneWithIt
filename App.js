@@ -13,11 +13,26 @@ import ImageScreen from './screens/Image/ImageScreen.js';
 import Button from './components/Button/Button';
 import Card from './components/Card/Card';
 import ListingScreen from './screens/ListingScreen/ListingScreen';
-import Messages from './screens/Messages/Messages'
-import MyAccount from './screens/MyAccount/MyAccount'
+import Messages from './screens/Messages/Messages';
+import MyAccount from './screens/MyAccount/MyAccount';
+import ListItem from './components/ListItem/ListItem';
+import Icon from './components/Icon/Icon';
+import Screen from './components/Screen/Screen';
+
 export default function App() {
 	return (
-		<MyAccount/>
+	<Screen>
+		<ListItem
+				name="Lindsey"
+				listings="2 listings"
+				ImageComponent={<Icon 
+					name='email'
+					size={35}
+					backgroundColor='black'
+					iconColor='white'
+			/>}
+			/>
+	</Screen>
 	);
 }
 
