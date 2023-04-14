@@ -2,11 +2,10 @@ import React from 'react';
 import { Image } from 'react-native';
 import Screen from '../../components/Screen/Screen';
 import styles from './loginScreenStyles';
-import { Formik } from 'formik';
 import * as Yup from 'yup';
 import AppFormField from '../../components/AppFormField/AppFormField';
 import SubmitButton from '../../components/AppFormField/SubmitButton/SubmitButton';
-
+import AppForm from '../../components/AppForm/AppForm';
 
 const validationSchema = Yup.object().shape({
 	email: Yup.string().required().email().label('Email'),
@@ -20,41 +19,30 @@ function LoginScreen(props) {
 				source={require('../../assets/logo-red.png')}
 				style={styles.logo}
 			/>
-
-			<Formik
+			<AppForm
 				initialValues={{ email: '', password: '' }}
 				onSubmit={(values) => console.log(values)}
 				validationSchema={validationSchema}>
-				{() => (
-					<>
-						<AppFormField
-							autoCapitalize="none"
-							autoCorrect={false}
-							keyboardType="email-address"
-							icon="email"
-							placeholder="Email"
-							textContentType="emailAddress"
-							name="email"
-						/>
-						<AppFormField
-							secureTextEntry
-							autoCapitalize="none"
-							autoCorrect={false}
-							icon="lock"
-							placeholder="Password"
-							textContentType="password"
-							name="password"
-                        />
-                        <SubmitButton
-							title="Login"
-                        />
-                       
-						
-                    </>
-                    
-				)}
-			</Formik>
-            
+				<AppFormField
+					autoCapitalize="none"
+					autoCorrect={false}
+					keyboardType="email-address"
+					icon="email"
+					placeholder="Email"
+					textContentType="emailAddress"
+					name="email"
+				/>
+				<AppFormField
+					secureTextEntry
+					autoCapitalize="none"
+					autoCorrect={false}
+					icon="lock"
+					placeholder="Password"
+					textContentType="password"
+					name="password"
+				/>
+				<SubmitButton title="Login" />
+			</AppForm>
 		</Screen>
 	);
 }
