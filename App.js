@@ -1,3 +1,4 @@
+import React, {useState} from 'react'
 import { StatusBar } from 'expo-status-bar';
 import {
 	Dimensions,
@@ -23,9 +24,12 @@ import AppTextInput from './components/AppTextInput.js/AppTextInput.js';
 import AppPicker from './components/AppPicker/AppPicker.js';
 
 export default function App() {
+	 const [category, setCategory] =useState(false)
 	return (
 		<Screen>
 			<AppPicker
+				selectedItem={category}
+				onSelectedItem={item => setCategory(item)}
 				icon="apps"
 				placeholder="category"></AppPicker>
 			<AppTextInput
