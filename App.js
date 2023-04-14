@@ -19,12 +19,16 @@ import ListItem from './components/ListItem/ListItem';
 import Icon from './components/Icon/Icon';
 import Screen from './components/Screen/Screen';
 import ListingsScreen from './screens/ListingsScreen/ListingsScreen.js';
+import AppTextInput from './components/AppTextInput.js/AppTextInput.js';
 
 export default function App() {
 	return (
-		<ListingsScreen
-
-	/>
+		<Screen>
+		<AppTextInput
+				placeholder="Username"
+				icon="email"
+			/>
+			</Screen>
 	);
 }
 
