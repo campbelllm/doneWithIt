@@ -20,15 +20,19 @@ import Icon from './components/Icon/Icon';
 import Screen from './components/Screen/Screen';
 import ListingsScreen from './screens/ListingsScreen/ListingsScreen.js';
 import AppTextInput from './components/AppTextInput.js/AppTextInput.js';
+import AppPicker from './components/AppPicker/AppPicker.js';
 
 export default function App() {
 	return (
 		<Screen>
-		<AppTextInput
+			<AppPicker
+				icon="apps"
+				placeholder="category"></AppPicker>
+			<AppTextInput
 				placeholder="Username"
 				icon="email"
 			/>
-			</Screen>
+		</Screen>
 	);
 }
 
