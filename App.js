@@ -8,10 +8,10 @@ import {
 	SafeAreaView,
 	Image,
 } from 'react-native';
-import LoginScreen from './screens/LoginScreen/LoginScreen';
+import RegisterScreen from './screens/RegisterScreen/RegisterScreen';
 
 export default function App() {
-	return <LoginScreen></LoginScreen>;
+	return <RegisterScreen></RegisterScreen>;
 }
 
 const styles = StyleSheet.create({
