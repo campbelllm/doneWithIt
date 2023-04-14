@@ -8,10 +8,11 @@ import {
 	SafeAreaView,
 	Image,
 } from 'react-native';
-import RegisterScreen from './screens/RegisterScreen/RegisterScreen';
+import ListingEditScreen from './screens/ListingEditScreen/ListingEditScreen';
+
 
 export default function App() {
-	return <RegisterScreen></RegisterScreen>;
+	return <ListingEditScreen></ListingEditScreen>;
 }
 
 const styles = StyleSheet.create({
