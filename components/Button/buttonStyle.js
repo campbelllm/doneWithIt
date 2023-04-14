@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
         margin: 10,
     },
     text: {
-		fontSize: '20px',
+		fontSize: 20,
         padding: 10,
         color: colors.white
 	},
