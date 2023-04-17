@@ -13,27 +13,15 @@ import AppFormPicker from './components/Forms/AppFormPicker/AppFormPicker';
 import Screen from './components/Screen/Screen';
 import Messages from './screens/Messages/Messages';
 import AppPicker from './components/AppPicker/AppPicker';
+import ListItem from './components/ListItem/ListItem';
+import ListingsScreen from './screens/ListingsScreen/ListingsScreen';
 
 
-const categories = [
-	{
-		label: 'Furniture',
-		value: 1,
-	},
-	{
-		label: 'Clothing',
-		value: 2,
-	},
-	{
-		label: 'Camera',
-		value: 3,
-	},
-];
+
 export default function App() {
-	return <ListingEditScreen>
-	
-	</ListingEditScreen>
-
+	return <Messages
+		
+	/>
 }
 
 const styles = StyleSheet.create({

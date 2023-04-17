@@ -41,6 +41,7 @@ function Messages() {
 						renderRightActions={() => (
 							<ListItemDeleteAction onPress={() => handleDelete(item)} />
 						)}
+						showIcon
 					/>
 				)}
 				ItemSeparatorComponent={ListItemSeparator}
