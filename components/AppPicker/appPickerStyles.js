@@ -14,8 +14,13 @@ const styles = StyleSheet.create({
 		marginRight: 10,
     },
     text: {
-        flex: 1,
-    }
+		flex: 1,
+	},
+	placeholder: {
+		color: colors.medium,
+		flex: 1,
+	}
+	
 });
 
 export default styles;

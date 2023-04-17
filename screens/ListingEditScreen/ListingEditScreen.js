@@ -1,51 +1,68 @@
 import React from 'react';
 import Screen from '../../components/Screen/Screen';
 import * as Yup from 'yup';
-import {AppForm, AppFormField, SubmitButton } from '../../components/Forms'
+import {
+	AppForm,
+	AppFormField,
+	SubmitButton,
+	AppFormPicker,
+} from '../../components/Forms';
 
-const category = 
-    [
-        { id:1,},
-        {id:2,},
-    ]
-
+const categories = [
+	{
+		label: 'Furniture',
+		value: 1,
+	},
+	{
+		label: 'Clothing',
+		value: 2,
+	},
+	{
+		label: 'Camera',
+		value: 3,
+	},
+];
 
 const validationSchema = Yup.object().shape({
-    title: Yup.string().required().min(1).max(20).label('Title'),
-    price: Yup.string().required().label('Price'),
-	description: Yup.string().max(500).email().label('Email'),
-	// password: Yup.string().required().min(4).label('Password'),
+	title: Yup.string().required().min(1).max(20).label('Title'),
+	price: Yup.string().required().min(1).max(10000).label('Price'),
+	category: Yup.object().required().nullable().label('Category'),
+	description: Yup.string().max(500).label('Description'),
 });
 
-function ListingEditScreen(props) {
+function ListingEditScreen() {
 	return (
 		<Screen>
 			<AppForm
-				initialValues={{ title: '',price: '',email: '', password: '' }}
+				initialValues={{
+					title: '',
+					price: '',
+					description: '',
+					category: null,
+				}}
 				onSubmit={(values) => console.log(values)}
 				validationSchema={validationSchema}>
 				<AppFormField
-					autoCapitalize="true"
+					autoCapitalize
 					autoCorrect={true}
-					keyboardType="text"
 					placeholder="Title"
-					textContentType="title"
 					name="title"
 				/>
 				<AppFormField
-					autoCapitalize="none"
-					autoCorrect={false}
-                    keyboardType="numeric"
-					placeholder={"Price"}
-					textContentType="price"
+					keyboardType="numeric"
+					placeholder='Price'
 					name="price"
-                />
-                <AppFormField
-					autoCapitalize="true"
+				/>
+				<AppFormPicker
+					name="category"
+					placeholder="Category"
+					items={categories}/>
+				<AppFormField
+					multiline
+					numberOfLines={3}
+					autoCapitalize
 					autoCorrect={false}
-                    keyboardType="text"
-					placeholder={"Description"}
-					textContentType="description"
+					placeholder={'Description'}
 					name="description"
 				/>
 				<SubmitButton title="Post" />
@@ -55,5 +72,3 @@ function ListingEditScreen(props) {
 }
 
 export default ListingEditScreen;
-
-
