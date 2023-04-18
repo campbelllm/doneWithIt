@@ -8,20 +8,27 @@ import {
 	FlatList,
 } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import PickerItem from '../PickerItem/PickerItem'
+import PickerItem from '../PickerItem/PickerItem';
 
 import styles from './appPickerStyles';
 import colors from '../../config/colors';
 import AppText from '../AppText/AppText';
 import Screen from '../Screen/Screen';
 
-function AppPicker({ icon, placeholder, items, onSelectedItem, selectedItem }) {
+function AppPicker({
+	icon,
+	placeholder,
+	items,
+	onSelectedItem,
+	selectedItem,
+	width= "100%",
+}) {
 	const [modalVisible, setModalVisible] = useState(false);
 
 	return (
 		<>
 			<TouchableWithoutFeedback onPress={() => setModalVisible(true)}>
-				<View style={styles.container}>
+				<View style={[styles.container,{width}]}>
 					{icon && (
 						<MaterialCommunityIcons
 							name={icon}
@@ -31,7 +38,11 @@ function AppPicker({ icon, placeholder, items, onSelectedItem, selectedItem }) {
 						/>
 					)}
 
-					{selectedItem ? <AppText style={styles.text}>{selectedItem.label}</AppText>: <AppText style={styles.placeholder}>{placeholder}</AppText>}
+					{selectedItem ? (
+						<AppText style={styles.text}>{selectedItem.label}</AppText>
+					) : (
+						<AppText style={styles.placeholder}>{placeholder}</AppText>
+					)}
 					<MaterialCommunityIcons
 						name="chevron-down"
 						size={20}
@@ -50,14 +61,15 @@ function AppPicker({ icon, placeholder, items, onSelectedItem, selectedItem }) {
 					<FlatList
 						data={items}
 						keyExtractor={(item) => item.value.toString()}
-                        renderItem={({ item }) => <PickerItem
-                            label={item.label}
-                            onPress={() => {
-                                setModalVisible(false);
-                                onSelectedItem(item);
-                            }}
-
-                        />}></FlatList>
+						renderItem={({ item }) => (
+							<PickerItem
+								label={item.label}
+								onPress={() => {
+									setModalVisible(false);
+									onSelectedItem(item);
+								}}
+							/>
+						)}></FlatList>
 				</Screen>
 			</Modal>
 		</>

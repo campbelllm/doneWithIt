@@ -52,11 +52,14 @@ function ListingEditScreen() {
 					keyboardType="numeric"
 					placeholder='Price'
 					name="price"
+					width="40%"
 				/>
 				<AppFormPicker
 					name="category"
 					placeholder="Category"
-					items={categories}/>
+					items={categories}
+					width="50%"
+					/>
 				<AppFormField
 					multiline
 					numberOfLines={3}
