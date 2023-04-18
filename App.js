@@ -19,7 +19,7 @@ import ListingsScreen from './screens/ListingsScreen/ListingsScreen';
 
 
 export default function App() {
-	return <Messages
+	return <ListItem
 		
 	/>
 }
