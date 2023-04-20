@@ -2,20 +2,20 @@ import React from 'react';
 import { View } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-function Icon({ name, backgroundColor, size = 35, iconColor= 'black' }) {
+function Icon({ iconName, iconBackgroundColor, iconSize = 35, iconColor= 'black' }) {
 	return (
 		<View
 			style={{
-				width: size,
-				height: size,
-				borderRadius: size / 2,
-				backgroundColor,
+				width: iconSize,
+				height: iconSize,
+				borderRadius: iconSize / 2,
+				backgroundColor: iconBackgroundColor,
 				justifyContent: 'center',
 				alignItems: 'center',
 			}}>
 			<MaterialCommunityIcons
-				name={name}
-				size={size * 0.5}
+				name={iconName}
+				size={iconSize * 0.5}
 				color={iconColor}
 			/>
 		</View>

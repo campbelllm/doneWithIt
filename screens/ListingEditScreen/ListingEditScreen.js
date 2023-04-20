@@ -14,11 +14,35 @@ const categories = [
 		value: 1,
 	},
 	{
-		label: 'Clothing',
+		label: 'Cars',
 		value: 2,
 	},
 	{
-		label: 'Camera',
+		label: 'Cameras',
+		value: 3,
+	},
+	{
+		label: 'Games',
+		value: 3,
+	},
+	{
+		label: 'Clothing',
+		value: 3,
+	},
+	{
+		label: 'Sports',
+		value: 3,
+	},
+	{
+		label: 'Movies & Music',
+		value: 3,
+	},
+	{
+		label: 'Books',
+		value: 3,
+	},
+	{
+		label: 'Other',
 		value: 3,
 	},
 ];
@@ -50,16 +74,18 @@ function ListingEditScreen() {
 				/>
 				<AppFormField
 					keyboardType="numeric"
-					placeholder='Price'
+					placeholder="Price"
 					name="price"
 					width="40%"
 				/>
 				<AppFormPicker
+					iconName="floor-lamp"
+					iconBackgroundColor="blue"
 					name="category"
 					placeholder="Category"
 					items={categories}
 					width="50%"
-					/>
+				/>
 				<AppFormField
 					multiline
 					numberOfLines={3}
