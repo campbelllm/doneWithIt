@@ -1,10 +1,15 @@
-import { StyleSheet } from "react-native"
+import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-    text: {
-        padding: 20
-    }
+	text: {
+		paddingTop: 10,
+	},
     
-})
+    iconTrue: {
+        flexDirection: 'column',
+		margin: 10,
+        alignItems: 'center',
+	},
+});
 
 export default styles;

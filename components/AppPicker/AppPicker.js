@@ -21,7 +21,7 @@ function AppPicker({
 	items,
 	onSelectedItem,
 	selectedItem,
-	width = "100%",
+	width = '100%',
 	...otherProps
 }) {
 	const [modalVisible, setModalVisible] = useState(false);
@@ -29,7 +29,7 @@ function AppPicker({
 	return (
 		<>
 			<TouchableWithoutFeedback onPress={() => setModalVisible(true)}>
-				<View style={[styles.container,{width}]}>
+				<View style={[styles.container, { width }]}>
 					{icon && (
 						<MaterialCommunityIcons
 							name={icon}
@@ -65,12 +65,15 @@ function AppPicker({
 						renderItem={({ item }) => (
 							<PickerItem
 								{...otherProps}
+								iconName={item.iconName}
+								iconBackgroundColor={item.iconBackgroundColor}
+								iconSize={item.iconSize}
+								iconColor={item.iconColor}
 								label={item.label}
 								onPress={() => {
 									setModalVisible(false);
 									onSelectedItem(item);
 								}}
-
 							/>
 						)}></FlatList>
 				</Screen>

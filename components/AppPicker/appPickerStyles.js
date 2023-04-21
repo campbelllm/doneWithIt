@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
 	placeholder: {
 		color: colors.medium,
 		flex: 1,
-	}
+	},
 	
 });
 
